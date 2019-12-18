@@ -239,4 +239,26 @@ restore data:
 DROP SCHEMA public CASCADE;
 CReaTE SCHEMA public;
 
-https://github.com/scrapinghub/python-scrapinghub/blob/master/docs/client/overview.rst
+
+class Trip(models.Model):
+    id = models.AutoField
+    company = models.ForeignKey(Company, on_delete=models.CASCADE)
+    train = models.ForeignKey(Train, on_delete=models.CASCADE)
+    start_date = models.DateField()
+    start_time_train = models.TimeField()
+    end_time_train = models.TimeField() 
+    type_ticket = models.IntegerField(default=0)
+    price_origin = models.FloatField(max_length=20)
+    price = models.FloatField(max_length=20)
+	
+	
+class Trip(models.Model):
+    id = models.AutoField
+    company = models.ForeignKey(Company, on_delete=models.CASCADE)
+    train = models.ForeignKey(Train, on_delete=models.CASCADE)
+    start_date = models.DateField()
+    start_time_train = models.TimeField()
+    end_time_train = models.TimeField() 
+    type_ticket = models.IntegerField(default=0)
+    price_origin = models.FloatField(max_length=20)
+    price = models.FloatField(max_length=20)
