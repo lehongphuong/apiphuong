@@ -1,0 +1,37 @@
+        //******************user************************
+        // user(id,idCompany,isCall,username,password,email,address,phone,pointAll,pointCurrent)
+        // Get all data from user
+        case 10: {
+            $sql = |SELECT * FROM user|;
+            break;
+        }
+
+        // Insert data to user
+        case 11: {
+            $sql = |INSERT INTO user(idCompany,isCall,username,password,email,address,phone,pointAll,pointCurrent)
+            		VALUES('$data->idCompany','$data->isCall','$data->username','$data->password','$data->email','$data->address','$data->phone','$data->pointAll','$data->pointCurrent')|;
+            break;
+        }
+
+        // Update data user
+        case 12: {
+            $sql = |UPDATE user SET idCompany='$data->idCompany', isCall='$data->isCall', username='$data->username', password='$data->password', email='$data->email', address='$data->address', phone='$data->phone', pointAll='$data->pointAll', pointCurrent = '$data->pointCurrent'
+            		WHERE id='$data->id'|;
+            break;
+        }
+
+        // Delete data of user
+        case 13: {
+            $sql = |DELETE FROM user
+            		WHERE id='$data->id'|;
+            break;
+        }
+
+        // Find data with id user
+        case 14: {
+            $sql = |SELECT * FROM user
+            		WHERE id='$data->id'|;
+            break;
+        }
+
+

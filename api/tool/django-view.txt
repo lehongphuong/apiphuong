@@ -1,0 +1,414 @@
+# *********************************************	
+# begin User	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get all data from User	
+def createDataUser(request, format=None):	
+    data = json.loads(json.dumps(request.data))	
+    obj = models.User(**data)	
+    obj.save()	
+    return Response({"id": obj.id, "result": "ok"})
+	
+	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get all data from User	
+def readDataUser(request, format=None):	
+    return Response(serializers.serialize("json", models.User.objects.all()))	
+	
+	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get update data from User	
+def updateDataUser(request, format=None):	
+    data = json.loads(json.dumps(request.data))	
+    models.User(**data).save()	
+    return Response({"result": "ok"})	
+	
+	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get delete data from User	
+def deleteDataUser(request, format=None):	
+    data = json.loads(json.dumps(request.data))	
+    models.User(**data).delete()	
+    return Response({"result": "ok"})	
+	
+	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get delete data from User	
+def findDataUser(request, format=None):	
+    return Response(serializers.serialize("json", models.User.objects.filter(pk=request.data['pk'])))	
+	
+# end User	
+# *********************************************	
+
+# *********************************************	
+# begin Ticket	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get all data from Ticket	
+def createDataTicket(request, format=None):	
+    data = json.loads(json.dumps(request.data))	
+    obj = models.Ticket(**data)	
+    obj.save()	
+    return Response({"id": obj.id, "result": "ok"})
+	
+	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get all data from Ticket	
+def readDataTicket(request, format=None):	
+    return Response(serializers.serialize("json", models.Ticket.objects.all()))	
+	
+	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get update data from Ticket	
+def updateDataTicket(request, format=None):	
+    data = json.loads(json.dumps(request.data))	
+    models.Ticket(**data).save()	
+    return Response({"result": "ok"})	
+	
+	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get delete data from Ticket	
+def deleteDataTicket(request, format=None):	
+    data = json.loads(json.dumps(request.data))	
+    models.Ticket(**data).delete()	
+    return Response({"result": "ok"})	
+	
+	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get delete data from Ticket	
+def findDataTicket(request, format=None):	
+    return Response(serializers.serialize("json", models.Ticket.objects.filter(pk=request.data['pk'])))	
+	
+# end Ticket	
+# *********************************************	
+
+# *********************************************	
+# begin Train	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get all data from Train	
+def createDataTrain(request, format=None):	
+    data = json.loads(json.dumps(request.data))	
+    obj = models.Train(**data)	
+    obj.save()	
+    return Response({"id": obj.id, "result": "ok"})
+	
+	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get all data from Train	
+def readDataTrain(request, format=None):	
+    return Response(serializers.serialize("json", models.Train.objects.all()))	
+	
+	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get update data from Train	
+def updateDataTrain(request, format=None):	
+    data = json.loads(json.dumps(request.data))	
+    models.Train(**data).save()	
+    return Response({"result": "ok"})	
+	
+	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get delete data from Train	
+def deleteDataTrain(request, format=None):	
+    data = json.loads(json.dumps(request.data))	
+    models.Train(**data).delete()	
+    return Response({"result": "ok"})	
+	
+	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get delete data from Train	
+def findDataTrain(request, format=None):	
+    return Response(serializers.serialize("json", models.Train.objects.filter(pk=request.data['pk'])))	
+	
+# end Train	
+# *********************************************	
+
+# *********************************************	
+# begin Debt	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get all data from Debt	
+def createDataDebt(request, format=None):	
+    data = json.loads(json.dumps(request.data))	
+    obj = models.Debt(**data)	
+    obj.save()	
+    return Response({"id": obj.id, "result": "ok"})
+	
+	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get all data from Debt	
+def readDataDebt(request, format=None):	
+    return Response(serializers.serialize("json", models.Debt.objects.all()))	
+	
+	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get update data from Debt	
+def updateDataDebt(request, format=None):	
+    data = json.loads(json.dumps(request.data))	
+    models.Debt(**data).save()	
+    return Response({"result": "ok"})	
+	
+	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get delete data from Debt	
+def deleteDataDebt(request, format=None):	
+    data = json.loads(json.dumps(request.data))	
+    models.Debt(**data).delete()	
+    return Response({"result": "ok"})	
+	
+	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get delete data from Debt	
+def findDataDebt(request, format=None):	
+    return Response(serializers.serialize("json", models.Debt.objects.filter(pk=request.data['pk'])))	
+	
+# end Debt	
+# *********************************************	
+
+# *********************************************	
+# begin Company	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get all data from Company	
+def createDataCompany(request, format=None):	
+    data = json.loads(json.dumps(request.data))	
+    obj = models.Company(**data)	
+    obj.save()	
+    return Response({"id": obj.id, "result": "ok"})
+	
+	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get all data from Company	
+def readDataCompany(request, format=None):	
+    return Response(serializers.serialize("json", models.Company.objects.all()))	
+	
+	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get update data from Company	
+def updateDataCompany(request, format=None):	
+    data = json.loads(json.dumps(request.data))	
+    models.Company(**data).save()	
+    return Response({"result": "ok"})	
+	
+	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get delete data from Company	
+def deleteDataCompany(request, format=None):	
+    data = json.loads(json.dumps(request.data))	
+    models.Company(**data).delete()	
+    return Response({"result": "ok"})	
+	
+	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get delete data from Company	
+def findDataCompany(request, format=None):	
+    return Response(serializers.serialize("json", models.Company.objects.filter(pk=request.data['pk'])))	
+	
+# end Company	
+# *********************************************	
+
+# *********************************************	
+# begin PriceTicket	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get all data from PriceTicket	
+def createDataPriceTicket(request, format=None):	
+    data = json.loads(json.dumps(request.data))	
+    obj = models.PriceTicket(**data)	
+    obj.save()	
+    return Response({"id": obj.id, "result": "ok"})
+	
+	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get all data from PriceTicket	
+def readDataPriceTicket(request, format=None):	
+    return Response(serializers.serialize("json", models.PriceTicket.objects.all()))	
+	
+	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get update data from PriceTicket	
+def updateDataPriceTicket(request, format=None):	
+    data = json.loads(json.dumps(request.data))	
+    models.PriceTicket(**data).save()	
+    return Response({"result": "ok"})	
+	
+	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get delete data from PriceTicket	
+def deleteDataPriceTicket(request, format=None):	
+    data = json.loads(json.dumps(request.data))	
+    models.PriceTicket(**data).delete()	
+    return Response({"result": "ok"})	
+	
+	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get delete data from PriceTicket	
+def findDataPriceTicket(request, format=None):	
+    return Response(serializers.serialize("json", models.PriceTicket.objects.filter(pk=request.data['pk'])))	
+	
+# end PriceTicket	
+# *********************************************	
+
+# *********************************************	
+# begin Trip	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get all data from Trip	
+def createDataTrip(request, format=None):	
+    data = json.loads(json.dumps(request.data))	
+    obj = models.Trip(**data)	
+    obj.save()	
+    return Response({"id": obj.id, "result": "ok"})
+	
+	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get all data from Trip	
+def readDataTrip(request, format=None):	
+    return Response(serializers.serialize("json", models.Trip.objects.all()))	
+	
+	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get update data from Trip	
+def updateDataTrip(request, format=None):	
+    data = json.loads(json.dumps(request.data))	
+    models.Trip(**data).save()	
+    return Response({"result": "ok"})	
+	
+	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get delete data from Trip	
+def deleteDataTrip(request, format=None):	
+    data = json.loads(json.dumps(request.data))	
+    models.Trip(**data).delete()	
+    return Response({"result": "ok"})	
+	
+	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get delete data from Trip	
+def findDataTrip(request, format=None):	
+    return Response(serializers.serialize("json", models.Trip.objects.filter(pk=request.data['pk'])))	
+	
+# end Trip	
+# *********************************************	
+
+# *********************************************	
+# begin Staff	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get all data from Staff	
+def createDataStaff(request, format=None):	
+    data = json.loads(json.dumps(request.data))	
+    obj = models.Staff(**data)	
+    obj.save()	
+    return Response({"id": obj.id, "result": "ok"})
+	
+	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get all data from Staff	
+def readDataStaff(request, format=None):	
+    return Response(serializers.serialize("json", models.Staff.objects.all()))	
+	
+	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get update data from Staff	
+def updateDataStaff(request, format=None):	
+    data = json.loads(json.dumps(request.data))	
+    models.Staff(**data).save()	
+    return Response({"result": "ok"})	
+	
+	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get delete data from Staff	
+def deleteDataStaff(request, format=None):	
+    data = json.loads(json.dumps(request.data))	
+    models.Staff(**data).delete()	
+    return Response({"result": "ok"})	
+	
+	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get delete data from Staff	
+def findDataStaff(request, format=None):	
+    return Response(serializers.serialize("json", models.Staff.objects.filter(pk=request.data['pk'])))	
+	
+# end Staff	
+# *********************************************	
+
+# *********************************************	
+# begin Staff	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get all data from Staff	
+def createDataStaff(request, format=None):	
+    data = json.loads(json.dumps(request.data))	
+    obj = models.Staff(**data)	
+    obj.save()	
+    return Response({"id": obj.id, "result": "ok"})
+	
+	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get all data from Staff	
+def readDataStaff(request, format=None):	
+    return Response(serializers.serialize("json", models.Staff.objects.all()))	
+	
+	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get update data from Staff	
+def updateDataStaff(request, format=None):	
+    data = json.loads(json.dumps(request.data))	
+    models.Staff(**data).save()	
+    return Response({"result": "ok"})	
+	
+	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get delete data from Staff	
+def deleteDataStaff(request, format=None):	
+    data = json.loads(json.dumps(request.data))	
+    models.Staff(**data).delete()	
+    return Response({"result": "ok"})	
+	
+	
+@api_view(['POST'])	
+@parser_classes((JSONParser,))	
+# get delete data from Staff	
+def findDataStaff(request, format=None):	
+    return Response(serializers.serialize("json", models.Staff.objects.filter(pk=request.data['pk'])))	
+	
+# end Staff	
+# *********************************************	
+

@@ -1,0 +1,9 @@
+9
+User(id,name,phone,cmnd,address,born)
+Ticket(id,idTrain,idTrip,idUser,numberSeat,isDebt,typeTicket,startDate,status)
+Train(id,name)
+Debt(id,idUser,idTicket,startDate,endDate,money)
+Company(id,username,password,name,born,address)
+PriceTicket(id,idTrip,idCompany,priceOrigin,price)
+Trip(id,startTime,endTime,totalSeat)
+Staff(id,username,name,born,address)

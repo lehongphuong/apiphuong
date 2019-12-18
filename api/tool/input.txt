@@ -1,0 +1,11 @@
+10
+user(id,username,fullname,born,sex,email,phone,address,level)
+car(id,name,image)
+driver(id,idCompany,username,fullname,password,cmnd,phone,address,experience,image)
+trip(id,idDriver,type,fromLocation,destLocation,fromCenter,destCenter,startDate,endDate,startTime,endTime,price,numberSeat)
+regulation(id,idTrip,name)
+ticket(id,idUser,idTrip,startDate,endDate,status,type,price)
+comment(id,idTrip,idDriver,star,message,feedback)
+reward(id,percent,maxPrice,startDate,endDate,status)
+company(id,name,phone,address,startDate,endDate,status)
+history(id,idCompany,modDate,userId,sqlQuery,action)
