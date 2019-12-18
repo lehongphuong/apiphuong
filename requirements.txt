@@ -1,5 +1,5 @@
 dj_database_url==0.5.0
-requests==2.11.1
+requests==2.20.0
 Django==2.2.1
 numpy==1.16.4
 matplotlib==3.1.0 
