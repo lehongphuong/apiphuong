@@ -126,6 +126,30 @@ def export_function_have_sql(data_source):
 
 
 #************************************
+# export comment
+#************************************
+def export_comment_vba(data_source): 
+    # restore nháy kép
+    data_source = data_source.replace('nhaykep','"') 
+    data_source = data_source.split('\n')  
+    source_output = '' 
+ 
+    # loop in source
+    for source in data_source:  
+        if (re.findall('Private Function',source)):
+            source_output+=source +'\n'
+
+        if (re.findall("'",source)):
+            source_output+=source +'\n' 
+                
+        if (re.findall('End Function',source)):
+            source_output+=source +'\n'
+            source_output+="\n\n****************************************************\n\n"
+        
+    return source_output
+
+
+#************************************
 # Main function migrate tool
 #************************************
 def main_migrate(data_source, data_pattern): 

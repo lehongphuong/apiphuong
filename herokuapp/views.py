@@ -68,6 +68,21 @@ def export_function_have_sql(request, format=None):
 
 
 # *********************************************
+# begin export
+@api_view(['POST'])
+@parser_classes((JSONParser,))
+# get all data from User
+def export_comment_vba(request, format=None):
+    data = json.loads(json.dumps(request.data))  
+    print(data['data_source'])
+    data_output = migrates.export_comment_vba(data['data_source'])
+
+    return Response(data_output) 
+# end export 
+# *********************************************
+
+
+# *********************************************
 # begin migrate
 @api_view(['POST'])
 @parser_classes((JSONParser,))
